@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI UnBiased Her</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <video autoplay muted loop id="bgVideo">
@@ -36,26 +37,7 @@
             <p>This section provides guidelines and resources for promoting fairness and diversity in workplaces.</p>
         </div>
     </div>
-    <script>
-        function openTab(tabName) {
-            const tabs = document.getElementsByClassName('tab-content');
-            for (let i = 0; i < tabs.length; i++) {
-                tabs[i].style.display = 'none';
-            }
-            document.getElementById(tabName).style.display = 'block';
-
-            const activeTabs = document.getElementsByClassName('tab');
-            for (let i = 0; i < activeTabs.length; i++) {
-                activeTabs[i].classList.remove('active');
-            }
-            document.querySelector('.tab[onclick="openTab(\'' + tabName + '\')"]').classList.add('active');
-        }
-
-        function redirectToAnalysis() {
-            alert("Redirecting to Analysis Page");
-            // You can add any additional logic here if needed.
-        }
-    </script>
+ <script href="./script.js"f></script>
 </body>
 </html>
 
