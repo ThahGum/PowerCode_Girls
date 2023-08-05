@@ -24,7 +24,7 @@
             </div>
             <div class="buttons">
                 <button id="analyzeButton" class="button">Analyze</button>
-                <button id="dataButton" class="button">Data</button>
+                <button id="dataButton" class="button" onclick="redirectToAnalysis()">Data</button>
             </div>
         </div>
         <div id="accreditation" class="tab-content">
@@ -50,6 +50,12 @@
             }
             document.querySelector('.tab[onclick="openTab(\'' + tabName + '\')"]').classList.add('active');
         }
+
+        function redirectToAnalysis() {
+            alert("Redirecting to Analysis Page");
+            // You can add any additional logic here if needed.
+        }
     </script>
 </body>
 </html>
+
