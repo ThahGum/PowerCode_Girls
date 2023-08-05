@@ -1,11 +1,11 @@
 # PowerCode_Girls
 GirlCode Hackerthon project
-[11:47, 05/08/2023] Melorh Wtc: Project Name: AI-UnbiasedHER
+Project Name: AI-UnbiasedHER
 Description: AI-UnbiasedHER is an innovative software project that aims to identify and mitigate gender bias in AI algorithms and systems. The project focuses on creating tools for bias detection, developing ethical AI guidelines, and designing algorithms that promote fairness and inclusivity.
 Key Features:
 * 		AI-BiasDetect: This module employs advanced AI techniques to analyze AI algorithms and systems for potential gender biases. It identifies instances where AI models may perpetuate gender-based stereotypes or discrimination, providing insights into biased decision-making.
 * 		AI-EthicalGuidelines: AI-UnbiasedHER includes a comprehensive library of ethical guidelines specifically tailored to mitigate gender bias in AI develop…
-[11:50, 05/08/2023] Melorh Wtc: Sure! Let's break down the steps to implement the "AI-UnbiasedHER" project using Python:
+Sure! Let's break down the steps to implement the "AI-UnbiasedHER" project using Python:
 
 Step 1: Define Project Scope and Requirements
 - Clearly outline the functionalities and modules of AI-UnbiasedHER, such as AI-BiasDetect, AI-EthicalGuidelines, AI-FairnessPromoter, AI-UnbiasedUI, AI-InclusiveData, and AI-UnbiasedEval.
