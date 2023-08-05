@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI UnBiased Her</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop id="bgVideo">
+        <source src="background-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <div class="tabs-container">
+            <div class="tab active" onclick="openTab('appIntro')">App Introduction</div>
+            <div class="tab" onclick="openTab('accreditation')">Accreditation</div>
+            <div class="tab" onclick="openTab('guidelines')">Guidelines</div>
+        </div>
+        <div id="appIntro" class="tab-content active">
+            <div class="header">
+                <h1>AI UnBiased Her</h1>
+                <p>The primary goal of this app is to create a positive social impact by raising awareness about gender bias and advocating for fairness and inclusivity in workplaces. The app helps companies analyze their employment data to uncover any gender imbalances and provides valuable insights to guide them in making more equitable decisions.</p>
+            </div>
+            <div class="buttons">
+                <button id="analyzeButton" class="button">Analyze</button>
+                <button id="dataButton" class="button">Data</button>
+            </div>
+        </div>
+        <div id="accreditation" class="tab-content">
+            <h2>Accreditation</h2>
+            <p>This section provides information about the certificate you can earn and how to earn it.</p>
+        </div>
+        <div id="guidelines" class="tab-content">
+            <h2>Guidelines</h2>
+            <p>This section provides guidelines and resources for promoting fairness and diversity in workplaces.</p>
+        </div>
+    </div>
+    <script>
+        function openTab(tabName) {
+            const tabs = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = 'none';
+            }
+            document.getElementById(tabName).style.display = 'block';
+
+            const activeTabs = document.getElementsByClassName('tab');
+            for (let i = 0; i < activeTabs.length; i++) {
+                activeTabs[i].classList.remove('active');
+            }
+            document.querySelector('.tab[onclick="openTab(\'' + tabName + '\')"]').classList.add('active');
+        }
+    </script>
+</body>
+</html>
