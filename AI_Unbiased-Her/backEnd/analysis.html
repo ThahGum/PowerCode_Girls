@@ -5,15 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analysis Page</title>
     <link rel="stylesheet" href="style.css">
-    <title>Analysis Page</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Your CSS styles here */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            z-index: 1;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .analysis-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .analysis-form label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .analysis-form input[type="text"],
+        .analysis-form input[type="number"],
+        .analysis-form input[type="email"],
+        .analysis-form button {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+        .submit-button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>Analysis Page</h1>
-            <p>melo.</p>
+            <p>Welcome to the company analysis page. Please provide the following information:</p>
         </div>
+        <form id="analysisForm" class="analysis-form">
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" name="companyName" required>
+
+            <label for="numberOfEmployees">Number of Employees:</label>
+            <input type="number" id="numberOfEmployees" name="numberOfEmployees" required>
+
+            <div id="emailInputs">
+                <!-- Email inputs will be dynamically added based on the number of employees -->
+            </div>
+
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("analysisForm");
+            const emailInputsContainer = document.getElementById("emailInputs");
+
+            // Dynamically add email inputs based on the number of employees
+            form.elements["numberOfEmployees"].addEventListener("input", function () {
+                const numberOfEmployees = parseInt(form.elements["numberOfEmployees"].value);
+
+                // Clear previous email inputs
+                emailInputsContainer.innerHTML = "";
+
+                // Generate new email inputs
+                for (let i = 1; i <= numberOfEmployees; i++) {
+                    const emailInput = document.createElement("input");
+                    emailInput.type = "email";
+                    emailInput.id = `email-${i}`;
+                    emailInput.name = `email-${i}`;
+                    emailInput.placeholder = `Employee ${i} Work Email`;
+                    emailInput.required = true;
+
+                    emailInputsContainer.appendChild(emailInput);
+                }
+            });
+        });
+    </script>
 </body>
 </html>

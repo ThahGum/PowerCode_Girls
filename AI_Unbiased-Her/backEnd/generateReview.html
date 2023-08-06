@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Power Code Girls</h1>
+            <p>This page displays the analysis of the gender equality data collected from the company.</p>
+        </div>
+        
+        <!-- <div class="analysis-charts">
+            <canvas id="genderChart" width="400" height="200"></canvas>
+        </div> -->
+
+        <div class="result-section">
+            <h2>Result</h2>
+            <div id="resultEmoji"></div>
+            <button onclick="generateReview()">Generate Review</button>
+            <div id="companyReview" style="display: none;">
+                <h3 style="font-size: 24px;">COMPANY REVIEW</h3>
+                <!-- Company review content here -->
+                <button onclick="downloadPDF()">Download PDF</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function downloadPDF() {
+            const link = document.createElement("a");
+            link.href = "melo.pdf"; // Replace with the actual path to your "melo.pdf" file
+            link.download = "melo.pdf";
+            link.click();
+        }
+    </script>
+</body>
+</html>
